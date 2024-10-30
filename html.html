@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <script src="./mqtt.js"></script>
+</head>
+<body>
+
+<Div id="Encabezado">
+    <h2>PANEL DE CONTROL "CASETAS KASIA"</h2> <br>
+    <p>Cliente: Mosquitto </p> 
+    <p>puerto: 8080 </p>
+</Div>
+<div id="datosMQTT">
+    <p>Topic:</p>
+    <input type="text" placeholder="Escribe el topic" id="topicIPT">
+    <input type="button" value="Conectar" onclick="startConnect()">
+    <input type="button" value="Desconectar" onclick="startDisconnect()">
+    <p>Mensaje:</p>
+    <input type="text" placeholder="Mensaje" id="messageIPT">
+    <p></p>
+    <input type="button" value="Enviar mensaje" onclick="publishMessage()">
+
+</div>
+<p id="hola">Consola:</p>
+<div id="consola"></div>
+<input type="button" value="Limpiar consola" onclick="cleanConsole()" id="hola2">
+</body>
+</html>
